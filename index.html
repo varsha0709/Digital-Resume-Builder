@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Digital Resume Builder</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- html2pdf -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+          integrity="sha512-YcsIPyN8uS0K9q+JzcK/CtYQgQki71R+xVQ1BM8DT6vKrrfE0Yv7FpC18JNpDutVdGs9rsFMpG1wGdZ2cN/zQw=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+
+<header>
+  <h1>Digital Resume Builder</h1>
+</header>
+
+<div class="container">
+
+  <!-- ================= USER FORM ================= -->
+  <div class="form-section">
+    <h2>Enter Your Details</h2>
+
+    <form id="resumeForm">
+
+      <h3>Personal Information</h3>
+      <input type="text" id="name" placeholder="Full Name" required>
+      <input type="text" id="title" placeholder="Job Title (Ex: Software Developer)" required>
+      <input type="email" id="email" placeholder="Email" required>
+      <input type="text" id="phone" placeholder="Phone Number" required>
+      <input type="text" id="address" placeholder="Address">
+
+      <h3>Education</h3>
+      <textarea id="education" rows="3" placeholder="Education Details" required></textarea>
+
+      <h3>Skills</h3>
+      <textarea id="skills" rows="3" placeholder="Enter skills separated by commas" required></textarea>
+
+      <h3>Experience / Projects</h3>
+      <textarea id="experience" rows="5" placeholder="Describe your experience or projects" required></textarea>
+
+      <h3>Certifications (Optional)</h3>
+      <textarea id="certifications" rows="3" placeholder="Any certifications?"></textarea>
+
+    </form>
+
+    <button id="downloadBtn">Download as PDF</button>
+  </div>
+
+
+  <!-- ================= LIVE PREVIEW ================= -->
+  <div class="preview-section" id="resume">
+
+    <div class="resume-header">
+      <h1 id="p-name">Your Name</h1>
+      <h3 id="p-title">Your Job Title</h3>
+      <p id="p-email">email@example.com | <span id="p-phone">1234567890</span></p>
+      <p id="p-address">Your Address</p>
+    </div>
+
+    <hr>
+
+    <h2>Education</h2>
+    <p id="p-education">Your education details will appear here...</p>
+
+    <h2>Skills</h2>
+    <ul id="p-skills">
+      <li>Skills will appear here...</li>
+    </ul>
+
+    <h2>Experience / Projects</h2>
+    <p id="p-experience">Your experience will appear here...</p>
+
+    <h2>Certifications</h2>
+    <p id="p-certifications">Certifications will appear here...</p>
+
+  </div>
+
+</div>
+<link rel="stylesheet" href="style.css" />
+<script src="script.js" defer></script>
+
+</body>
+</html>
